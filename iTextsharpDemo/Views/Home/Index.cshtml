@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "iTextSharp PDF Demo";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Generate PDFs with iTextSharp</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+        @using (Html.BeginForm("GenerateBasicPDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">1. Basic Text</button>
+            </div>
+        }
+        @using (Html.BeginForm("GenerateFontPDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">2. Font & Color</button>
+            </div>
+        }
+        @using (Html.BeginForm("GenerateMultiFontPDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">3. Multi-Fonts</button>
+            </div>
+        }
+        @using (Html.BeginForm("GenerateTablePDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">4. Table</button>
+            </div>
+        }
+        @using (Html.BeginForm("GenerateImagePDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">5. Image</button>
+            </div>
+        }
+        @using (Html.BeginForm("GenerateLinkPDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">6. Hyperlink</button>
+            </div>
+        }
+        @using (Html.BeginForm("GenerateHeaderFooterPDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">7. Header/Footer</button>
+            </div>
+        }
+        @using (Html.BeginForm("GenerateListPDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">8. List</button>
+            </div>
+        }
+        @using (Html.BeginForm("GenerateMultiPagePDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">9. Multi-Page</button>
+            </div>
+        }
+        @using (Html.BeginForm("GenerateAdvancedPDF", "Home", FormMethod.Post))
+        {
+            <div class="col">
+                <button type="submit" class="btn btn-primary w-100">10. Advanced Mix</button>
+            </div>
+        }
+    </div>
+</div>
